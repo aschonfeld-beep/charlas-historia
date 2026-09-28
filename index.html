@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Charlas con la historia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="juego">
+  <!-- 1. Escena: mapa de imágenes con las áreas clickeables -->
+  <div id="escena">
+    <img id="fondo" width="640" height="480" alt="Escenario">
+    <map name="personajes" id="mapa"></map>
+  </div>
+
+  <aside id="lateral">
+    <!-- 2. Cara del personaje (180x240) -->
+    <div id="cara"><div class="vacio">Elegí a alguien para hablar</div></div>
+    <!-- 3. Logo de la charla -->
+    <div id="logo"></div>
+  </aside>
+
+  <!-- 4. Sección inferior: acción / respuesta / pregunta -->
+  <section id="inferior">
+    <div id="accion">&nbsp;</div>
+    <div id="respuesta" aria-live="polite"></div>
+    <div id="form">
+      <input id="pregunta" type="text" maxlength="300" placeholder="Escribí tu pregunta y apretá Enter" autocomplete="off">
+      <button id="enviar" type="button">Preguntar</button>
+    </div>
+  </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
